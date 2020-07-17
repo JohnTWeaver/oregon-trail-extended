@@ -15,13 +15,12 @@ class Wagon{
         return "Wagon Full"
     }
     shouldQuarantine(){ 
-        for(let i =0; i < this.passengers.length; i++){
-            if(!this.passengers[i].isHealty){
-            return true 
+        for(let i = 0; i < this.passengers.length; i++){
+            if(this.passengers[i].isHealthy === false){
+               return true
             }
         }
         return false
-        //needs fixed
     }
     totalFood(){
     let foodTotal = 0
